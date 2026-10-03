@@ -2258,14 +2258,14 @@ footer {
 
 <!-- SHARED NAV -->
 <nav id="main-nav">
-  <a href="#" class="logo" onclick="showPage('index')">2nd<span>CFO</span></a>
+  <a href="#" class="logo" onclick="event.preventDefault(); showPage('index')">2nd<span>CFO</span></a>
   <ul>
-    <li><a href="#" onclick="showPage('index')" data-page="index" class="active">Home</a></li>
-    <li><a href="#" onclick="showPage('about')" data-page="about">About</a></li>
-    <li><a href="#" onclick="showPage('services')" data-page="services">Services</a></li>
-    <li><a href="#" onclick="showPage('industries')" data-page="industries">Industries</a></li>
-    <li><a href="#" onclick="showPage('pricing')" data-page="pricing">Pricing</a></li>
-    <li><a href="#" onclick="showPage('contact')" data-page="contact" class="nav-cta">Contact Us</a></li>
+    <li><a href="#" onclick="event.preventDefault(); showPage('index')" data-page="index" class="active">Home</a></li>
+    <li><a href="#" onclick="event.preventDefault(); showPage('about')" data-page="about">About</a></li>
+    <li><a href="#" onclick="event.preventDefault(); showPage('services')" data-page="services">Services</a></li>
+    <li><a href="#" onclick="event.preventDefault(); showPage('industries')" data-page="industries">Industries</a></li>
+    <li><a href="#" onclick="event.preventDefault(); showPage('pricing')" data-page="pricing">Pricing</a></li>
+    <li><a href="#" onclick="event.preventDefault(); showPage('contact')" data-page="contact" class="nav-cta">Contact Us</a></li>
   </ul>
 </nav>
 
@@ -2434,6 +2434,35 @@ footer {
       <div class="pain-icon">🔍</div>
       <h3>No Visibility Into Profit Drivers</h3>
       <p>Which service line is carrying the business? Which clients cost more to serve than they pay? Without data, you're making big decisions on gut feel.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY FOCUS -->
+<section class="section" aria-labelledby="home-industries-title">
+  <div class="reveal">
+    <div class="section-label">Who We Work With</div>
+    <h2 class="section-title" id="home-industries-title">Your business has its own numbers.<br><em>Know what they mean.</em></h2>
+    <p class="section-sub">Our initial focus is law firms, construction and specialty contractors, and HVAC, plumbing, and electrical businesses. Understand profitability, labor costs, cash flow, and the operational changes behind your financial results.</p>
+  </div>
+  <div class="card-grid-3">
+    <div class="card reveal">
+      <div class="pain-icon">⚖️</div>
+      <h3>Law Firms</h3>
+      <p>Know which clients, matters, and practice areas drive your firm’s profitability.</p>
+      <a href="#law-firms" class="btn-secondary" style="margin-top:1.5rem;">Explore Law Firms</a>
+    </div>
+    <div class="card reveal">
+      <div class="pain-icon">🏗️</div>
+      <h3>Construction &amp; Specialty Contractors</h3>
+      <p>Understand which jobs make money—and where costs are eroding your margin.</p>
+      <a href="#construction" class="btn-secondary" style="margin-top:1.5rem;">Explore Construction</a>
+    </div>
+    <div class="card reveal">
+      <div class="pain-icon">🔧</div>
+      <h3>HVAC, Plumbing &amp; Electrical</h3>
+      <p>See which jobs, technicians, and service lines contribute to profitable growth.</p>
+      <a href="#home-services" class="btn-secondary" style="margin-top:1.5rem;">Explore Home Services</a>
     </div>
   </div>
 </section>
@@ -2922,46 +2951,34 @@ footer {
 
 <div class="page-hero">
   <div class="page-label">Industries We Serve</div>
-  <h1>Strategic finance for businesses<br>that are <em>building something.</em></h1>
-  <p>2ndCFO works with founders and owners across industries who share one thing in common: they need financial clarity to grow with confidence, not just bookkeeping to stay compliant.</p>
+  <h1>Bookkeeping + Intelligence.<br><em>Built around your business.</em></h1>
+  <p>Our initial focus: Law Firms; Construction &amp; Specialty Contractors; and HVAC, Plumbing &amp; Electrical. Financial intelligence for operators who need to understand profitability, control costs, and plan cash flow.</p>
 </div>
 
 <section class="section">
   <div class="reveal" style="text-align:center; max-width:680px; margin:0 auto 3.5rem;">
     <div class="section-label">Who We Work With</div>
-    <h2 class="section-title">Every business is different.<br><em>The need for clarity is universal.</em></h2>
-    <p class="section-sub">Whether you're billing by the hour, shipping products, or scaling a recurring revenue model — growing businesses face the same core challenge: making the right financial decisions without a full-time CFO in the room.</p>
+    <h2 class="section-title">Three focused verticals.<br><em>Financial clarity that fits.</em></h2>
+    <p class="section-sub">From matter economics to project margins and service-call profitability, we help you understand the numbers behind the work. The depth of analysis depends on the financial and operational data available for your business.</p>
   </div>
   <div class="card-grid-3">
     <div class="card reveal">
       <div class="pain-icon">⚖️</div>
       <h3>Law Firms</h3>
-      <p>Matter profitability, realization, collections, and partner compensation — we help firms turn billing data into financial clarity.</p>
-    </div>
-    <div class="card reveal">
-      <div class="pain-icon">🩺</div>
-      <h3>Healthcare & Medical Practices</h3>
-      <p>From payer mix analysis to provider productivity and collections cycles, we help medical practices build the financial visibility needed to grow and run lean.</p>
-    </div>
-    <div class="card reveal">
-      <div class="pain-icon">💻</div>
-      <h3>Technology & SaaS</h3>
-      <p>MRR, churn, CAC, LTV — we speak SaaS fluently. We help tech founders model growth, manage burn, and understand the unit economics behind every decision.</p>
+      <p>Know which clients, matters, and practice areas drive your firm’s profitability. Connect the books to the way your firm works: time, billing, collections, and the cost of serving clients.</p>
+      <a href="#law-firms" class="btn-secondary" style="margin-top:1.5rem;">Explore Law Firms</a>
     </div>
     <div class="card reveal">
       <div class="pain-icon">🏗️</div>
-      <h3>Construction & Contracting</h3>
-      <p>Job costing, WIP schedules, backlog management, and cash timing — construction businesses live and die by financial discipline. We build the systems that support it.</p>
+      <h3>Construction &amp; Specialty Contractors</h3>
+      <p>Understand which jobs make money—and where costs are eroding your margin. Bring job costs, billing, and cash requirements into one financial picture for project-based construction and specialty contracting businesses.</p>
+      <a href="#construction" class="btn-secondary" style="margin-top:1.5rem;">Explore Construction</a>
     </div>
     <div class="card reveal">
-      <div class="pain-icon">🏪</div>
-      <h3>Professional Services</h3>
-      <p>Consulting, marketing, accounting, recruiting — service firms need to know their utilization, margin by client, and when to hire next. We make that clear.</p>
-    </div>
-    <div class="card reveal">
-      <div class="pain-icon">🛍️</div>
-      <h3>E-Commerce & Retail</h3>
-      <p>Inventory turns, contribution margin, channel profitability — product businesses need forward-looking forecasts that account for seasonality and supplier timing.</p>
+      <div class="pain-icon">🔧</div>
+      <h3>HVAC, Plumbing &amp; Electrical</h3>
+      <p>See which jobs, technicians, and service lines contribute to profitable growth. Financial intelligence for HVAC, plumbing, and electrical operators managing service calls, installations, recurring maintenance, and busy seasons.</p>
+      <a href="#home-services" class="btn-secondary" style="margin-top:1.5rem;">Explore Home Services</a>
     </div>
   </div>
 </section>
@@ -2970,7 +2987,7 @@ footer {
   <div class="reveal">
     <div class="section-label">The Common Thread</div>
     <h2 class="section-title">Different industries.<br><em>Same financial blind spots.</em></h2>
-    <p class="section-sub">Across every industry we serve, founders and owners tend to face the same challenges — and benefit from the same core solutions.</p>
+    <p class="section-sub">Across these three verticals, operators need to know what changed, why it matters, and what deserves attention next.</p>
   </div>
   <div class="how-grid" style="grid-template-columns:repeat(4,1fr);">
     <div class="how-step reveal">
@@ -2986,24 +3003,12 @@ footer {
     <div class="how-step reveal">
       <div class="how-num">03</div>
       <h3>Profit Without Visibility</h3>
-      <p>Busy doesn't mean profitable. We break down margin by client, product, or service line so you know where money is being made — and where it's being lost.</p>
+      <p>Busy doesn't mean profitable. We break down margin by matter, job, or service line so you know where money is being made — and where it's being lost.</p>
     </div>
     <div class="how-step reveal">
       <div class="how-num">04</div>
       <h3>Growth Without a Plan</h3>
       <p>Scaling without financial infrastructure leads to chaos. We build the systems and reporting that let you grow faster without losing control.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section section-mid">
-  <div class="reveal" style="text-align:center; max-width:660px; margin:0 auto;">
-    <div class="section-label">Don't See Your Industry?</div>
-    <h2 class="section-title" style="text-align:center;">If you're growing and need<br><em>financial clarity, we should talk.</em></h2>
-    <p class="section-sub" style="text-align:center;">Our approach adapts to your business model, your metrics, and your goals. Reach out and we'll tell you honestly if we can help.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;">
-      <a href="contact.html" class="btn-primary">Book a Discovery Call</a>
-      <a href="services.html" class="btn-secondary">See Our Services</a>
     </div>
   </div>
 </section>
@@ -3059,6 +3064,234 @@ footer {
   </div>
 </footer>
 
+</div>
+
+<!-- PAGE: LAW-FIRMS -->
+<div class="page" id="page-law-firms">
+  <div class="page-hero">
+    <div class="page-label">Bookkeeping + Intelligence · Law Firms</div>
+    <h1>Law Firms<br><em>Know what drives your profit.</em></h1>
+    <p>Know which clients, matters, and practice areas drive your firm’s profitability.</p>
+  </div>
+  <section class="section">
+    <div class="reveal">
+      <div class="section-label">Financial Intelligence for Operators</div>
+      <h2 class="section-title">Beyond the financial statements.<br><em>Into the decisions you face.</em></h2>
+      <p class="section-sub">Connect the books to the way your firm works: time, billing, collections, and the cost of serving clients.</p>
+    </div>
+    <div class="card-grid-3"><div class="card reveal"><h3>Matter &amp; Practice-Area Profitability</h3><p>Understand where fees translate into profit, which matters absorb more time than expected, and how performance varies across practice areas.</p></div>
+<div class="card reveal"><h3>Utilization, Realization &amp; Collections</h3><p>See how attorney time becomes billed fees and collected cash. Identify write-downs, aging receivables, and collection delays that deserve attention.</p></div>
+<div class="card reveal"><h3>Cash Flow &amp; Partner Economics</h3><p>Understand payroll, overhead, and collection timing before planning partner draws or another hire.</p></div></div>
+  </section>
+  <section class="section section-mid">
+    <div class="reveal">
+      <div class="section-label">From Books to Understanding</div>
+      <h2 class="section-title">Clean books. Relevant insights.<br><em>A clearer next decision.</em></h2>
+      <p class="section-sub">We start with organized, reconciled financial records. With the relevant billing, job, time, and payroll data, we help explain changes in profitability, expenses, and cash flow. We'll confirm the data and analysis available for your business during discovery.</p>
+      <a href="services.html" class="btn-secondary">Explore Our Services</a>
+    </div>
+  </section>
+  <div class="cta-banner">
+    <h2>Understand what deserves<br><em>your attention next.</em></h2>
+    <p>Tell us about your business and the financial questions you need answered.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-primary">Book a Discovery Call</a>
+      <a href="pricing.html" class="btn-secondary">View Pricing</a>
+      <a href="industries.html" class="btn-secondary">All Industries</a>
+    </div>
+  </div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">2nd<span>CFO</span></a>
+      <p>Bookkeeping + Intelligence — for the smart operator.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Live Dashboard</a></li>
+        <li><a href="services.html">Strategic Advisory</a></li>
+        <li><a href="services.html">Financial Reporting</a></li>
+        <li><a href="services.html">Cash Flow Forecasting</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@2ndcfo.com">hello@2ndcfo.com</a></li>
+        <li><a href="contact.html">Book a Call</a></li>
+        <li><a href="#">Seattle, WA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 2ndCFO · Your Books. Your Story. Your Next Move.</p>
+    <span>2NDCFO.COM</span>
+  </div>
+</footer>
+</div>
+
+<!-- PAGE: CONSTRUCTION -->
+<div class="page" id="page-construction">
+  <div class="page-hero">
+    <div class="page-label">Bookkeeping + Intelligence · Construction &amp; Specialty Contractors</div>
+    <h1>Construction &amp; Specialty Contractors<br><em>Know what drives your profit.</em></h1>
+    <p>Understand which jobs make money—and where costs are eroding your margin.</p>
+  </div>
+  <section class="section">
+    <div class="reveal">
+      <div class="section-label">Financial Intelligence for Operators</div>
+      <h2 class="section-title">Beyond the financial statements.<br><em>Into the decisions you face.</em></h2>
+      <p class="section-sub">Bring job costs, billing, and cash requirements into one financial picture for project-based construction and specialty contracting businesses.</p>
+    </div>
+    <div class="card-grid-3"><div class="card reveal"><h3>Estimated vs. Actual Job Costs</h3><p>Compare labor, materials, and subcontractor costs with estimates. See where overruns are affecting job margins and future bids.</p></div>
+<div class="card reveal"><h3>Work in Progress &amp; Change Orders</h3><p>Understand how work in progress, billing progress, and change orders affect reported profitability and the cash still to be collected.</p></div>
+<div class="card reveal"><h3>Receivables &amp; Project Cash Needs</h3><p>See how customer payments, retainage, payroll, and vendor commitments line up so you can anticipate cash gaps across projects.</p></div></div>
+  </section>
+  <section class="section section-mid">
+    <div class="reveal">
+      <div class="section-label">From Books to Understanding</div>
+      <h2 class="section-title">Clean books. Relevant insights.<br><em>A clearer next decision.</em></h2>
+      <p class="section-sub">We start with organized, reconciled financial records. With the relevant billing, job, time, and payroll data, we help explain changes in profitability, expenses, and cash flow. We'll confirm the data and analysis available for your business during discovery.</p>
+      <a href="services.html" class="btn-secondary">Explore Our Services</a>
+    </div>
+  </section>
+  <div class="cta-banner">
+    <h2>Understand what deserves<br><em>your attention next.</em></h2>
+    <p>Tell us about your business and the financial questions you need answered.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-primary">Book a Discovery Call</a>
+      <a href="pricing.html" class="btn-secondary">View Pricing</a>
+      <a href="industries.html" class="btn-secondary">All Industries</a>
+    </div>
+  </div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">2nd<span>CFO</span></a>
+      <p>Bookkeeping + Intelligence — for the smart operator.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Live Dashboard</a></li>
+        <li><a href="services.html">Strategic Advisory</a></li>
+        <li><a href="services.html">Financial Reporting</a></li>
+        <li><a href="services.html">Cash Flow Forecasting</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@2ndcfo.com">hello@2ndcfo.com</a></li>
+        <li><a href="contact.html">Book a Call</a></li>
+        <li><a href="#">Seattle, WA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 2ndCFO · Your Books. Your Story. Your Next Move.</p>
+    <span>2NDCFO.COM</span>
+  </div>
+</footer>
+</div>
+
+<!-- PAGE: HOME-SERVICES -->
+<div class="page" id="page-home-services">
+  <div class="page-hero">
+    <div class="page-label">Bookkeeping + Intelligence · HVAC, Plumbing &amp; Electrical</div>
+    <h1>HVAC, Plumbing &amp; Electrical<br><em>Know what drives your profit.</em></h1>
+    <p>See which jobs, technicians, and service lines contribute to profitable growth.</p>
+  </div>
+  <section class="section">
+    <div class="reveal">
+      <div class="section-label">Financial Intelligence for Operators</div>
+      <h2 class="section-title">Beyond the financial statements.<br><em>Into the decisions you face.</em></h2>
+      <p class="section-sub">Financial intelligence for HVAC, plumbing, and electrical operators managing service calls, installations, recurring maintenance, and busy seasons.</p>
+    </div>
+    <div class="card-grid-3"><div class="card reveal"><h3>Job &amp; Service-Line Margins</h3><p>Compare service, repair, installation, and maintenance work. Understand how labor and material costs shape the profit behind each revenue stream.</p></div>
+<div class="card reveal"><h3>Technician Productivity &amp; Labor Costs</h3><p>Connect technician time and labor costs with job revenue. Understand whether overtime, callbacks, or a changing job mix are putting pressure on margins.</p></div>
+<div class="card reveal"><h3>Seasonal Cash Flow &amp; Growth Decisions</h3><p>Understand collections, seasonal demand, and operating expenses before adding a technician, buying a truck, or increasing marketing spend.</p></div></div>
+  </section>
+  <section class="section section-mid">
+    <div class="reveal">
+      <div class="section-label">From Books to Understanding</div>
+      <h2 class="section-title">Clean books. Relevant insights.<br><em>A clearer next decision.</em></h2>
+      <p class="section-sub">We start with organized, reconciled financial records. With the relevant billing, job, time, and payroll data, we help explain changes in profitability, expenses, and cash flow. We'll confirm the data and analysis available for your business during discovery.</p>
+      <a href="services.html" class="btn-secondary">Explore Our Services</a>
+    </div>
+  </section>
+  <div class="cta-banner">
+    <h2>Understand what deserves<br><em>your attention next.</em></h2>
+    <p>Tell us about your business and the financial questions you need answered.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-primary">Book a Discovery Call</a>
+      <a href="pricing.html" class="btn-secondary">View Pricing</a>
+      <a href="industries.html" class="btn-secondary">All Industries</a>
+    </div>
+  </div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">2nd<span>CFO</span></a>
+      <p>Bookkeeping + Intelligence — for the smart operator.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Live Dashboard</a></li>
+        <li><a href="services.html">Strategic Advisory</a></li>
+        <li><a href="services.html">Financial Reporting</a></li>
+        <li><a href="services.html">Cash Flow Forecasting</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@2ndcfo.com">hello@2ndcfo.com</a></li>
+        <li><a href="contact.html">Book a Call</a></li>
+        <li><a href="#">Seattle, WA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 2ndCFO · Your Books. Your Story. Your Next Move.</p>
+    <span>2NDCFO.COM</span>
+  </div>
+</footer>
 </div>
 
 <!-- PAGE: PRICING -->
@@ -3208,7 +3441,7 @@ footer {
         Do you work with firms outside Seattle?
         
       </button>
-      <div class="faq-a"><p>We work with businesses across industries and locations. Since all our work is done remotely, geography is rarely a barrier. Reach out and we'll let you know if we're a good fit.</p></div>
+      <div class="faq-a"><p>Our initial focus is Law Firms, Construction &amp; Specialty Contractors, and HVAC, Plumbing &amp; Electrical. We work remotely, so geography is rarely a barrier. Reach out to discuss your business and financial needs.</p></div>
     </div>
   </div>
 </section>
@@ -3372,13 +3605,9 @@ footer {
             <label>Industry / Business Type</label>
             <select name="industry">
               <option value="" disabled selected>Select...</option>
-              <option>Professional Services</option>
-              <option>Technology / SaaS</option>
-              <option>Healthcare / Medical</option>
-              <option>Construction / Trades</option>
-              <option>E-Commerce / Retail</option>
-              <option>Legal Services</option>
-              <option>Hospitality / Food & Beverage</option>
+              <option>Law Firms</option>
+              <option>Construction &amp; Specialty Contractors</option>
+              <option>HVAC, Plumbing &amp; Electrical</option>
               <option>Other</option>
             </select>
           </div>
@@ -3472,26 +3701,33 @@ footer {
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function showPage(page) {
+  if (!document.getElementById('page-' + page)) page = 'index';
+  if (window.location.hash !== '#' + page) {
+    history.pushState(null, '', '#' + page);
+  }
   // Hide all pages
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   // Show target
   document.getElementById('page-' + page).classList.add('active');
   // Update nav active state
   document.querySelectorAll('nav ul a[data-page]').forEach(a => {
-    a.classList.toggle('active', a.dataset.page === page);
+    a.classList.toggle('active', a.dataset.page === (['law-firms', 'construction', 'home-services'].includes(page) ? 'industries' : page));
     // Contact button should keep nav-cta class
     if (a.dataset.page === 'contact') {
       a.classList.add('nav-cta');
     }
   });
   // Scroll to top
-  window.scrollTo(0, 0);
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   // Update browser title
   const titles = {
     index: '2ndCFO — Your Books. Your Story. Your Next Move.',
     about: 'About — 2ndCFO',
     services: 'Services — 2ndCFO',
     industries: 'Industries — 2ndCFO',
+    'law-firms': 'Law Firms — Bookkeeping + Intelligence — 2ndCFO',
+    construction: 'Construction & Specialty Contractors — 2ndCFO',
+    'home-services': 'HVAC, Plumbing & Electrical — 2ndCFO',
     pricing: 'Pricing — 2ndCFO',
     contact: 'Contact — 2ndCFO'
   };
@@ -3521,7 +3757,7 @@ function fixLinks() {
       'contact.html': 'contact'
     };
     if (map[href]) {
-      a.setAttribute('href', '#');
+      a.setAttribute('href', '#' + map[href]);
       a.addEventListener('click', e => { e.preventDefault(); showPage(map[href]); });
     }
   });
@@ -3574,7 +3810,21 @@ const initObs = new IntersectionObserver(entries => {
 document.querySelectorAll('#page-index .reveal').forEach(el => initObs.observe(el));
 
 // Fix all internal links on load
-window.addEventListener('DOMContentLoaded', fixLinks);
+window.addEventListener('DOMContentLoaded', () => {
+  fixLinks();
+  document.querySelectorAll('a[onclick][data-page]').forEach(a => {
+    a.setAttribute('href', '#' + a.dataset.page);
+  });
+  document.querySelectorAll('a[href="#law-firms"], a[href="#construction"], a[href="#home-services"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      showPage(a.getAttribute('href').slice(1));
+    });
+  });
+  showPage(window.location.hash.slice(1) || 'index');
+});
+window.addEventListener('popstate', () => showPage(window.location.hash.slice(1) || 'index'));
+window.addEventListener('hashchange', () => showPage(window.location.hash.slice(1) || 'index'));
 </script>
 
 <style>
