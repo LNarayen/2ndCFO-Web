@@ -2547,7 +2547,7 @@ footer {
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:support@2ndCFO.com">support@2ndCFO.com</a></li>
+        <li data-contact-email style="display:none"><a></a></li>
         <li><a href="contact.html">Book a Call</a></li>
         <li><a href="#">Seattle, WA</a></li>
       </ul>
@@ -2696,7 +2696,7 @@ footer {
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:support@2ndCFO.com">support@2ndCFO.com</a></li>
+        <li data-contact-email style="display:none"><a></a></li>
         <li><a href="contact.html">Book a Call</a></li>
         <li><a href="#">Seattle, WA</a></li>
       </ul>
@@ -2932,7 +2932,7 @@ footer {
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:support@2ndCFO.com">support@2ndCFO.com</a></li>
+        <li data-contact-email style="display:none"><a></a></li>
         <li><a href="contact.html">Book a Call</a></li>
         <li><a href="#">Seattle, WA</a></li>
       </ul>
@@ -3052,7 +3052,7 @@ footer {
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:support@2ndCFO.com">support@2ndCFO.com</a></li>
+        <li data-contact-email style="display:none"><a></a></li>
         <li><a href="contact.html">Book a Call</a></li>
         <li><a href="#">Seattle, WA</a></li>
       </ul>
@@ -3129,7 +3129,7 @@ footer {
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:support@2ndCFO.com">support@2ndCFO.com</a></li>
+        <li data-contact-email style="display:none"><a></a></li>
         <li><a href="contact.html">Book a Call</a></li>
         <li><a href="#">Seattle, WA</a></li>
       </ul>
@@ -3205,7 +3205,7 @@ footer {
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:support@2ndCFO.com">support@2ndCFO.com</a></li>
+        <li data-contact-email style="display:none"><a></a></li>
         <li><a href="contact.html">Book a Call</a></li>
         <li><a href="#">Seattle, WA</a></li>
       </ul>
@@ -3281,7 +3281,7 @@ footer {
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:support@2ndCFO.com">support@2ndCFO.com</a></li>
+        <li data-contact-email style="display:none"><a></a></li>
         <li><a href="contact.html">Book a Call</a></li>
         <li><a href="#">Seattle, WA</a></li>
       </ul>
@@ -3327,7 +3327,7 @@ footer {
         <li>Monthly close</li>
         <li>P&L, balance sheet, cash-flow reporting</li>
         <li class="divider"><span class="divider-label">Support</span></li>
-        <li>Email support, 24-hour response</li>
+        <li>Support, 24-hour response</li>
       </ul>
       <a href="contact.html" class="btn-secondary" style="width:100%; text-align:center; display:block;">Get Started</a>
     </div>
@@ -3485,7 +3485,7 @@ footer {
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:support@2ndCFO.com">support@2ndCFO.com</a></li>
+        <li data-contact-email style="display:none"><a></a></li>
         <li><a href="contact.html">Book a Call</a></li>
         <li><a href="#">Seattle, WA</a></li>
       </ul>
@@ -3520,11 +3520,11 @@ footer {
       <p>Whether you're ready to move forward or just exploring your options, we're happy to talk. Most firms find that one conversation is enough to understand what's possible.</p>
 
       <div class="contact-methods">
-        <div class="contact-method">
+        <div class="contact-method" data-contact-email style="display:none">
           <div class="cm-icon">📧</div>
           <div>
             <div class="cm-label">Email</div>
-            <div class="cm-value"><a href="mailto:support@2ndCFO.com">support@2ndCFO.com</a></div>
+            <div class="cm-value"><a></a></div>
           </div>
         </div>
         <div class="contact-method">
@@ -3685,7 +3685,7 @@ footer {
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:support@2ndCFO.com">support@2ndCFO.com</a></li>
+        <li data-contact-email style="display:none"><a></a></li>
         <li><a href="contact.html">Book a Call</a></li>
         <li><a href="#">Seattle, WA</a></li>
       </ul>
@@ -3794,12 +3794,12 @@ async function submitForm(e) {
     } else {
       btn.textContent = 'Send My Request →';
       btn.disabled = false;
-      alert('Something went wrong. Please try again or email us directly.');
+      alert('Something went wrong. Please try again in a few minutes.');
     }
   } catch (err) {
     btn.textContent = 'Send My Request →';
     btn.disabled = false;
-    alert('Something went wrong. Please try again or email us directly.');
+    alert('Something went wrong. Please try again in a few minutes.');
   }
 }
 
@@ -3811,6 +3811,16 @@ document.querySelectorAll('#page-index .reveal').forEach(el => initObs.observe(e
 
 // Fix all internal links on load
 window.addEventListener('DOMContentLoaded', () => {
+  // Set this to a verified mailbox to restore email in every footer and Contact.
+  const contactEmail = '';
+  if (contactEmail) {
+    document.querySelectorAll('[data-contact-email]').forEach(slot => {
+      const link = slot.querySelector('a');
+      link.textContent = contactEmail;
+      link.href = 'mailto:' + contactEmail;
+      slot.style.removeProperty('display');
+    });
+  }
   fixLinks();
   document.querySelectorAll('a[onclick][data-page]').forEach(a => {
     a.setAttribute('href', '#' + a.dataset.page);
