@@ -1,0 +1,7 @@
+{
+  "name": "2ndcfo-website",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node scripts/build.mjs", "test": "node --test scripts/site.test.mjs" },
+  "engines": { "node": ">=20" }
+}

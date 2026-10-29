@@ -88,3 +88,18 @@ strong, .editorial-strong { font-weight:600; color:#2c493d; }
 #home-industries-title + .section-sub { max-width:65ch; }
 .founder-story strong { font-weight:600; }
 .founder-story mark { background:#e4ead8; color:#2c493d; }
+
+/* Indexable service and industry navigation. */
+nav .seo-menu { position:relative; color:#3e6154; font-size:.85rem; }
+nav .seo-menu summary { cursor:pointer; padding:.6rem .9rem; }
+nav .seo-menu > div { position:absolute; top:2.5rem; left:0; z-index:100; min-width:250px; background:#faf9f6; border:1px solid #dce2d7; border-radius:6px; padding:.6rem; box-shadow:0 10px 25px #283e3a15; }
+nav .seo-menu > div a { display:block; padding:.6rem; line-height:1.5; }
+.seo-menu summary:focus-visible,.seo-card:focus-visible { outline:3px solid #3e6154; outline-offset:3px; }
+.seo-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; margin-top:2rem; }
+.seo-card { display:block; text-decoration:none; color:#283e3a; border:1px solid #dce2d7; border-radius:8px; background:#fff9; padding:1.5rem; }
+.seo-card h3 { font-size:1.15rem; margin-bottom:.8rem; }
+.seo-card p { color:#596762; line-height:1.8; margin-bottom:1rem; }
+.seo-card span { color:#3e6154; text-decoration:underline; text-underline-offset:.2em; }
+@media(max-width:640px) { .seo-cards { grid-template-columns:1fr; } nav .seo-menu { font-size:.76rem; } nav .seo-menu summary { padding:.4rem .45rem; } nav .seo-menu > div { left:auto; right:-4rem; max-width:85vw; } }
+/* Preserve readable process steps on small screens. */
+@media(max-width:640px) { .how-grid { grid-template-columns:1fr !important; } .how-step { min-width:0; } }
