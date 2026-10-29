@@ -32,3 +32,27 @@ test('crawl and contact configuration',()=>{
   assert.ok(home.includes('https://formspree.io/f/xqeyqgwb'));
   assert.ok(!home.includes('href="#construction"'));
 });
+
+test('all pages use the same accessible navigation and assets', async () => {
+  const { navigation } = await import('./navigation.mjs');
+  for (const file of ['index.html', ...pages.map(p => p.path+'/index.html')]) {
+    const html = read(file);
+    assert.ok(html.includes(navigation), `${file}: shared header`);
+    assert.equal((html.match(/id="site-header"/g)||[]).length, 1);
+    assert.ok(html.includes('href="/navigation.css"'));
+    assert.ok(html.includes('src="/navigation.js" defer'));
+    assert.ok(!html.includes('class="seo-menu"'));
+    for (const id of ['services-menu', 'industries-menu']) {
+      assert.ok(html.includes(`aria-controls="${id}"`));
+      assert.ok(html.includes(`id="${id}" hidden`));
+    }
+  }
+  for (const asset of ['navigation.css', 'navigation.js']) assert.equal(read('dist/'+asset), read(asset));
+});
+
+test('build is repeatable without duplicating header or assets', async () => {
+  const { execFileSync } = await import('node:child_process');
+  const before = read('index.html');
+  execFileSync(process.execPath, ['scripts/build.mjs'], {cwd:root});
+  assert.equal(read('index.html'), before);
+});

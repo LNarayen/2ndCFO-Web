@@ -2273,17 +2273,17 @@ footer {
 <body>
 
 <!-- SHARED NAV -->
-<nav id="main-nav">
-  <a href="#" class="logo" onclick="event.preventDefault(); showPage('index')">2nd<span>CFO</span></a>
-  <ul>
-    <li><a href="#" onclick="event.preventDefault(); showPage('index')" data-page="index" class="active">Home</a></li>
-    <li><a href="#" onclick="event.preventDefault(); showPage('about')" data-page="about">About</a></li>
-    <li><details class="seo-menu"><summary>Services</summary><div><a href="/#services" onclick="event.preventDefault(); showPage('services')">Services overview</a><a href="/services/bookkeeping/">Bookkeeping</a><a href="/services/financial-intelligence/">Financial intelligence</a><a href="/services/fractional-cfo/">Fractional CFO</a></div></details></li>
-    <li><details class="seo-menu"><summary>Industries</summary><div><a href="/#industries" onclick="event.preventDefault(); showPage('industries')">Industries overview</a><a href="/industries/law-firms/">Law firms</a><a href="/industries/specialty-contractors/">Specialty contractors</a><a href="/industries/hvac-plumbing-electrical/">HVAC, plumbing &amp; electrical</a></div></details></li>
-    <li><a href="#" onclick="event.preventDefault(); showPage('pricing')" data-page="pricing">Pricing</a></li>
-    <li><a href="#" onclick="event.preventDefault(); showPage('contact')" data-page="contact" class="nav-cta">Contact Us</a></li>
-  </ul>
-</nav>
+<header class="site-header" id="site-header">
+<a class="site-brand" href="/">2nd<span>CFO</span></a>
+<button class="site-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu <span aria-hidden="true">☰</span></button>
+<nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+<a href="/#index" data-page="index">Home</a><a href="/#about" data-page="about">About</a>
+<div class="site-disclosure"><button type="button" aria-expanded="false" aria-controls="services-menu">Services <span class="site-chevron" aria-hidden="true"></span></button><div class="site-panel" id="services-menu" hidden>
+<a href="/#services" data-page="services">Services overview</a><a href="/services/bookkeeping/">Bookkeeping</a><a href="/services/financial-intelligence/">Financial intelligence</a><a href="/services/fractional-cfo/">Fractional CFO</a></div></div>
+<div class="site-disclosure"><button type="button" aria-expanded="false" aria-controls="industries-menu">Industries <span class="site-chevron" aria-hidden="true"></span></button><div class="site-panel" id="industries-menu" hidden>
+<a href="/#industries" data-page="industries">Industries overview</a><a href="/industries/law-firms/">Law firms</a><a href="/industries/specialty-contractors/">Specialty contractors</a><a href="/industries/hvac-plumbing-electrical/">HVAC, plumbing &amp; electrical</a></div></div>
+<a href="/#pricing" data-page="pricing">Pricing</a><a class="site-contact" href="/#contact" data-page="contact">Contact Us</a>
+</nav></header>
 
 <!-- PAGE: HOME -->
 <div class="page active" id="page-index">
@@ -3685,7 +3685,7 @@ function showPage(page) {
   // Show target
   document.getElementById('page-' + page).classList.add('active');
   // Update nav active state
-  document.querySelectorAll('nav ul a[data-page]').forEach(a => {
+  document.querySelectorAll('.site-nav a[data-page]').forEach(a => {
     a.classList.toggle('active', a.dataset.page === (['law-firms', 'construction', 'home-services'].includes(page) ? 'industries' : page));
     // Contact button should keep nav-cta class
     if (a.dataset.page === 'contact') {
@@ -3907,5 +3907,7 @@ blockquote { text-align: center !important; }
 }
 </style>
 <link rel="stylesheet" href="calm.css">
+<link rel="stylesheet" href="/navigation.css">
+<script src="/navigation.js" defer></script>
 </body>
 </html>

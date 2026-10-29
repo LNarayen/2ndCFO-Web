@@ -20,3 +20,7 @@ Published routes:
 - `/industries/hvac-plumbing-electrical/`
 
 New-page CTAs open the existing `/#contact` form. No form submission is required for route verification. No additional city pages, integrations, testimonials, guarantees, or pricing commitments were added.
+
+## Shared responsive header
+
+`scripts/navigation.mjs` is the single header template used by the homepage (including pricing) and all generated routes. `navigation.css` isolates header styling from legacy page CSS; `navigation.js` controls click/keyboard disclosure, Escape, outside click, focus departure, and mobile expansion. Edit these shared sources and rebuild. Below 761px the Menu button expands an internally scrolling navigation panel; desktop links stay on one row.
