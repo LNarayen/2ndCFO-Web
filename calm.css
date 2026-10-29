@@ -103,3 +103,19 @@ nav .seo-menu > div a { display:block; padding:.6rem; line-height:1.5; }
 @media(max-width:640px) { .seo-cards { grid-template-columns:1fr; } nav .seo-menu { font-size:.76rem; } nav .seo-menu summary { padding:.4rem .45rem; } nav .seo-menu > div { left:auto; right:-4rem; max-width:85vw; } }
 /* Preserve readable process steps on small screens. */
 @media(max-width:640px) { .how-grid { grid-template-columns:1fr !important; } .how-step { min-width:0; } }
+
+/* Outcome messaging must wrap naturally at narrow widths. */
+#page-index .hero h1 em {font-size:1em !important;display:inline;}
+#page-index .hero h1 {font-size:clamp(2rem,3.5vw,3.2rem);line-height:1.2;}
+#page-index .hero-sub {max-width:50ch;}
+#page-index .hero > div {min-width:0;}
+#page-index li {white-space:normal !important;}
+.example-note {font-size:.8rem;line-height:1.7;margin-top:1rem;color:#596762;}
+@media(max-width:760px) {
+ #page-index .section > .reveal > ul {grid-template-columns:1fr !important;}
+ #page-index .section-mid > div[style*="repeat(4"] {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media(max-width:420px) {
+ #page-index .section-mid > div[style*="repeat(4"] {grid-template-columns:1fr !important;}
+ .dash-header {gap:.5rem;flex-wrap:wrap;}
+}
