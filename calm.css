@@ -104,9 +104,9 @@ nav .seo-menu > div a { display:block; padding:.6rem; line-height:1.5; }
 /* Preserve readable process steps on small screens. */
 @media(max-width:640px) { .how-grid { grid-template-columns:1fr !important; } .how-step { min-width:0; } }
 
-/* Outcome messaging must wrap naturally at narrow widths. */
-#page-index .hero h1 em {font-size:1em !important;display:inline;}
-#page-index .hero h1 {font-size:clamp(2rem,3.5vw,3.2rem);line-height:1.2;}
+/* Keep the primary message dominant; allow natural wrapping on small screens. */
+#page-index .hero h1 {font-size:clamp(2rem,3.5vw,3.2rem);line-height:1.2;margin-bottom:.65rem;}
+#page-index .hero-secondary {font-family:'DM Sans',sans-serif;font-size:clamp(1.2rem,2vw,1.65rem);font-weight:400;line-height:1.35;letter-spacing:-.02em;color:var(--gold);margin-bottom:1.3rem;}
 #page-index .hero-sub {max-width:50ch;}
 #page-index .hero > div {min-width:0;}
 #page-index li {white-space:normal !important;}
